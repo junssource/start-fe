@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>source</title>
+</head>
+<body>
+
+<div id="board">
+    <!-- 이 HTML을 자바스크립트로 추가하면 됩니다.
+      <span class="black"></span>
+      <span class="white"></span>
+      <span class="black"></span>
+      <span class="white"></span>
+      <span class="white"></span>
+      <span class="black"></span>
+      <span class="white"></span>
+      <span class="black"></span>
+      <span class="black"></span>
+      <span class="white"></span>
+      <span class="black"></span>
+      <span class="white"></span>
+      <span class="white"></span>
+      <span class="black"></span>
+      <span class="white"></span>
+      <span class="black"></span>
+    //-->
+</div>
+<script>
+
+     var board = document.getElementById("board");
+    for(var i=0; i<4; i++){
+        for(var j=0; j<2; j++){
+            var newSpan = document.createElement("span");
+            newSpan.classList="black";
+            board.appendChild(newSpan);
+
+            var newSpan = document.createElement("span");
+            newSpan.classList="white";
+            board.appendChild(newSpan);
+        }
+    }
+
+    var black = document.querySelectorAll('.black');
+    var white = document.querySelectorAll('.white');
+
+    for(var i=0; i<black.length; i++) {
+        black[i].style.width="50px";
+        black[i].style.height="50px";
+        black[i].style.border="1px solid black";
+    }
+
+    for(var i=0; i<black.length; i++) {
+        white[i].style.width="50px";
+        white[i].style.height="50px";
+        white[i].style.border="1px solid white";
+    }
+
+   
+
+
+
+</script>
+</body>
+</html>
